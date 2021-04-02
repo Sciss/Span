@@ -9,12 +9,12 @@ lazy val deps = new {
     val serial    = "2.0.1"
   }
   val test = new {
-    val scalaTest = "3.2.4"
+    val scalaTest = "3.2.7"
   }
 }
 
 lazy val commonJvmSettings = Seq(
-  crossScalaVersions := Seq("3.0.0-RC1", "2.13.4", "2.12.13"),
+  crossScalaVersions := Seq("3.0.0-RC2", "2.13.5", "2.12.13"),
 )
 
 // sonatype plugin requires that these are in global
@@ -26,7 +26,7 @@ lazy val root = crossProject(JSPlatform, JVMPlatform).in(file("."))
     name               := baseName,
 //    version            := projectVersion,
 //    organization       := "de.sciss",
-    scalaVersion       := "2.13.4",
+    scalaVersion       := "2.13.5",
     description        := "A simple data type for describing sample frame intervals",
     homepage           := Some(url(s"https://git.iem.at/sciss/${name.value}")),
     licenses           := Seq("LGPL v2.1+" -> url( "http://www.gnu.org/licenses/lgpl-2.1.txt")),
